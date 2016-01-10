@@ -1,8 +1,31 @@
+.shadow-effect {
+	position:relative;       
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  &:before,
+  &:after {
+	  content:"";
+    position:absolute; 
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    border-radius:100px / 10px;
+  }
+}
+
+.hover-style {
+  padding: ($spacer-m + $spacer-xxs);
+  font-size:1.5em;
+}
+
 #{$all-buttons} {
   appearance: none;
-  background-color: white;
-  border: $special-border-size solid $black;
-  color: $black;
+  @include linear-gradient($gradient-pink-to-orange-1, $gradient-pink-to-orange-5); // background color
+  // border: $special-border-size solid $black;
+  bottom:0;
+  color: $white;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
@@ -10,18 +33,19 @@
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
-  padding: $small-spacing $base-spacing;
+  padding: $spacer-m;
   text-decoration: none;
-  // transition: background-color $base-duration $base-timing;
+  text-transform:uppercase;
+  transition: all $base-duration $base-timing;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  
+  @extend .shadow-effect;
 
   &:hover,
   &:focus {
-    // background-color: shade($action-color, 20%);
-    // color: #fff;
-    @include linear-gradient($gradient-pink-to-orange-1, $gradient-pink-to-orange-5);
+    @extend .hover-style;
   }
 
   &:disabled {

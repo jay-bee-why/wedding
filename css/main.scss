@@ -9,6 +9,7 @@
 @import "_core/neat/neat";
 
 @import "breakpoints"; // For some weird reason these all have to go after all these imports. It can't go in _core/base/base/variables like everything else.
+@import "style";
 @import "header";
 @import "footer";
 @import "home";

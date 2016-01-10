@@ -1,15 +1,14 @@
-
+/*
 header {
-	background-color:pink;
+	width:100%;
+	background-color:rgba(255,255,255,.35);
+	position:fixed;
+	top:0;
+	left:0;
 	
 	.header_inner-container {
 			@include outer-container;
-			background-color:rgba(255,255,255,.75);
 	}
 	
-
 }
-
-// @include outer-container;
-// aside { @include span-columns(3); }
-// article { @include span-columns(9); }
+*/
