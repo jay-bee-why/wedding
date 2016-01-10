@@ -1,0 +1,82 @@
+.section {
+	
+	.section__inner-wrapper {
+			
+		@include outer-container;
+		text-align:center;
+		padding:$spacer-m $spacer-s;
+
+
+		@include media($tablet){
+			padding:$spacer-l $spacer-m;
+		}
+		
+		@include media($desktop){
+			padding:$spacer-xl 0;
+		}
+				
+			img {
+				display:block;
+				margin:0 auto;
+			}
+		
+			iframe {
+				margin:0 auto;
+				display:block;
+			}
+		}
+	
+}
+
+.section--hero {
+	height:900px;
+}
+
+.section--content {
+
+	background-color:white;
+	min-height:300px;
+	
+}
+
+.intro {
+	background-color:$dark-blue;
+}
+
+.story {
+
+}
+
+.eagle-rock {
+	background:url("/img/cfaer-outside.jpg") center center no-repeat;
+	background-size:cover;
+}
+
+.location {
+	
+	.map-placeholder {
+		background-color:$light-gray;
+		text-align:center;
+		width:100%;
+		max-width:500px;
+		height:500px;
+		position:relative;
+		margin:0 auto;
+		
+		button {
+			display:block;
+			position:absolute;
+			top:50%;
+			margin-top:-20px;
+			left:50%;
+			margin-left:-67px;
+		}
+		
+	}
+	
+}
+
+
+// @include outer-container;
+// aside { @include span-columns(3); }
+// article { @include span-columns(9); }

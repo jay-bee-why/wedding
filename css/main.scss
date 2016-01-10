@@ -1,0 +1,14 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "_core/reset";
+@import "_core/bourbon/bourbon";
+@import "_core/base/base";
+@import "_core/neat/neat";
+
+// @import "style.scss";
+@import "header";
+@import "footer";
+@import "home";
