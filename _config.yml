@@ -19,3 +19,6 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+gems: [jekyll-slim]
+ # This will require each of these gems automatically.
