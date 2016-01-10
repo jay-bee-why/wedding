@@ -61,9 +61,4 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 $base-duration: .25s;
 $base-timing: ease;
 
-// Media Queries
 
-// $mobile: new-breakpoint(max-width 480px 4);
-$tablet: new-breakpoint(min-width 481px);
-$desktop: new-breakpoint(min-width 787px);
-$deaktop-huge: new-breakpoint(min-width 1160px);

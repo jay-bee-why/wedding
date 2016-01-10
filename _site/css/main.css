@@ -343,10 +343,10 @@ header {
     clear: both;
     content: "";
     display: table; }
-  @media screen and (min-width: new-breakpoint(min-width 481px)) {
+  @media screen and (min-width: 481px) {
     .section .section__inner-wrapper {
       padding: 3.75rem 1.875rem; } }
-  @media screen and (min-width: new-breakpoint(min-width 787px)) {
+  @media screen and (min-width: 787px) {
     .section .section__inner-wrapper {
       padding: 6.25rem 0; } }
   .section .section__inner-wrapper img {
@@ -375,7 +375,6 @@ header {
   text-align: center;
   width: 100%;
   max-width: 500px;
-  height: 500px;
   position: relative;
   margin: 0 auto; }
   .location .map-placeholder button {
