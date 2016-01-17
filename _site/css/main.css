@@ -117,6 +117,12 @@ textarea {
   overflow: auto;
   vertical-align: top; }
 
+@font-face {
+  font-family: "ca-recape";
+  src: url("/fonts/da6470da2d566f1ad804cbfa4beb5e26.eot");
+  /* IE9*/
+  src: url("/fonts/da6470da2d566f1ad804cbfa4beb5e26.eot?#iefix") format("embedded-opentype"), url("/fonts/da6470da2d566f1ad804cbfa4beb5e26.woff") format("woff"), url("/fonts/da6470da2d566f1ad804cbfa4beb5e26.ttf") format("truetype"), url("/fonts/da6470da2d566f1ad804cbfa4beb5e26.svg#CARecapeW00-Regular") format("svg");
+  /* iOS 4.1- */ }
 .shadow-effect, button, input[type="button"], input[type="reset"], input[type="submit"] {
   position: relative;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; }
@@ -278,17 +284,21 @@ body {
   line-height: 1.5; }
 
 h1,
+.h1,
+.section--hero .title-container .section--hero__title,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", "helvetica", sans-serif;
+  font-family: "ca-recape", "Montserrat", "helvetica", sans-serif;
   font-size: 1em;
   line-height: 1.2;
   margin: 0 0 0.75em; }
 
-h1 {
+h1,
+.h1,
+.section--hero .title-container .section--hero__title {
   font-size: 3rem; }
 
 h2 {
@@ -412,6 +422,7 @@ footer {
       -webkit-transform: rotate(-3deg);
       -moz-transform: rotate(-3deg);
       -ms-transform: rotate(-3deg);
+      -o-transform: rotate(-3deg);
       transform: rotate(-3deg); }
       @media screen and (min-width: 481px) {
         .section .section__punchout:after {
@@ -424,6 +435,40 @@ footer {
 
 .section--hero {
   min-height: 900px; }
+  .section--hero .section__inner-wrapper {
+    height: 100%;
+    padding: 0 1.25rem; }
+  .section--hero .title-container {
+    color: white;
+    margin: 0 auto;
+    padding: 1.25rem; }
+    @media screen and (min-width: 600px) {
+      .section--hero .title-container {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); } }
+    .section--hero .title-container__inner {
+      padding: 1.875rem; }
+    .section--hero .title-container .section--hero__title {
+      position: relative;
+      z-index: 1; }
+      .section--hero .title-container .section--hero__title:after {
+        content: attr(data-text);
+        color: #F57F3A;
+        left: 0;
+        right: -5px;
+        position: absolute;
+        top: 5px;
+        z-index: -1; }
+      @media screen and (min-width: 600px) {
+        .section--hero .title-container .section--hero__title {
+          line-height: 1;
+          font-size: 10.9375rem;
+          margin-bottom: 1.875rem; } }
+    .section--hero .title-container .section--hero__subtitle {
+      font-size: 1.875rem; }
 
 .section--content {
   background-color: white;
@@ -431,31 +476,16 @@ footer {
 
 .intro {
   background-color: #000033; }
-  .intro .section__inner-wrapper {
-    height: 100%;
-    padding: 0 1.25rem; }
   .intro .title-container {
-    color: white;
-    margin: 0 auto;
-    padding: 1.25rem;
     background-color: #F53E7A;
     background-image: -webkit-linear-gradient(#F53E7A, #F59723);
     background-image: linear-gradient(#F53E7A, #F59723); }
-    @media screen and (min-width: 600px) {
-      .intro .title-container {
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%); } }
     .intro .title-container__inner {
-      background-color: #000033;
-      padding: 1.875rem; }
+      background-color: #000033; }
     .intro .title-container img {
       border: 30px solid white;
-      border-bottom-width: 40px;
       margin-top: -6.25rem;
-      margin-bottom: 3.75rem;
+      margin-bottom: 1.875rem;
       -webkit-transform: rotate(2deg);
       -moz-transform: rotate(2deg);
       -ms-transform: rotate(2deg);
@@ -464,17 +494,12 @@ footer {
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       box-shadow: 0 1px 10px rgba(0, 0, 0, 0.75); }
-    .intro .title-container h1 {
-      text-transform: uppercase; }
-      @media screen and (min-width: 600px) {
-        .intro .title-container h1 {
-          font-size: 3.75rem; } }
-    .intro .title-container p {
-      font-size: 1.875rem; }
 
 .eagle-rock {
   background: url("/img/cfaer-outside.jpg") center center no-repeat;
   background-size: cover; }
+  .eagle-rock .section--hero__title:after {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35); }
 
 .location .map-placeholder {
   background-color: #ddd;
