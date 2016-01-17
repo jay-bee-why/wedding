@@ -144,7 +144,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Montserrat", "helvetica", sans-serif;
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
@@ -172,7 +172,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Montserrat", "helvetica", sans-serif;
   font-size: 1em; }
 
 label {
@@ -190,7 +190,7 @@ select[multiple=multiple] {
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Montserrat", "helvetica", sans-serif;
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em;
@@ -272,7 +272,7 @@ th {
 
 body {
   color: #222;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Montserrat", "helvetica", sans-serif;
   font-feature-settings: "kern", "liga", "pnum";
   font-size: 1em;
   line-height: 1.5; }
@@ -283,7 +283,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Montserrat", "helvetica", sans-serif;
   font-size: 1em;
   line-height: 1.2;
   margin: 0 0 0.75em; }
@@ -370,6 +370,7 @@ footer {
 .section {
   position: relative; }
   .section .section__inner-wrapper {
+    position: relative;
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
@@ -430,6 +431,46 @@ footer {
 
 .intro {
   background-color: #000033; }
+  .intro .section__inner-wrapper {
+    height: 100%;
+    padding: 0 1.25rem; }
+  .intro .title-container {
+    color: white;
+    margin: 0 auto;
+    padding: 1.25rem;
+    background-color: #F53E7A;
+    background-image: -webkit-linear-gradient(#F53E7A, #F59723);
+    background-image: linear-gradient(#F53E7A, #F59723); }
+    @media screen and (min-width: 600px) {
+      .intro .title-container {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); } }
+    .intro .title-container__inner {
+      background-color: #000033;
+      padding: 1.875rem; }
+    .intro .title-container img {
+      border: 30px solid white;
+      border-bottom-width: 40px;
+      margin-top: -6.25rem;
+      margin-bottom: 3.75rem;
+      -webkit-transform: rotate(2deg);
+      -moz-transform: rotate(2deg);
+      -ms-transform: rotate(2deg);
+      -o-transform: rotate(2deg);
+      transform: rotate(2deg);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.75); }
+    .intro .title-container h1 {
+      text-transform: uppercase; }
+      @media screen and (min-width: 600px) {
+        .intro .title-container h1 {
+          font-size: 3.75rem; } }
+    .intro .title-container p {
+      font-size: 1.875rem; }
 
 .eagle-rock {
   background: url("/img/cfaer-outside.jpg") center center no-repeat;

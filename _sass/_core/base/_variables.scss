@@ -1,5 +1,20 @@
+// Mixins
+// Don't have a better place for this yet
+
+// @include vertical-align();
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 // Typography
-$base-font-family: $helvetica;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+$base-font-family:'Montserrat', 'helvetica', sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -50,7 +65,7 @@ $action-color: $gradient-pink-to-orange-1;
 // Border
 $base-border-color: $black;
 $base-border: 1px solid $base-border-color;
-$special-border-size:5px;
+$border-size-special:5px;
 
 // Background Colors
 $base-background-color: #fff;
@@ -63,5 +78,3 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: .25s;
 $base-timing: ease;
-
-

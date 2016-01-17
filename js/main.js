@@ -2,7 +2,7 @@ var windowHeight = '';
 var jsHeroTarget = '';
 
 $(document).ready(function() {
-  
+
 
 
 
@@ -16,6 +16,6 @@ function heroResize() {
 
 	windowHeight = $(window).height();
 	jsHeroTarget = $('.js--hero-resize');
-	jsHeroTarget.css('min-height', windowHeight + 200);
-	
+	jsHeroTarget.css('height', windowHeight);
+
 }

@@ -1,10 +1,12 @@
 // General section styling
 // --------------------------------------------------
 .section {
-	
+
 	position:relative;
-	
+
 	.section__inner-wrapper {
+
+		position:relative;
 
 		@include outer-container;
 		text-align:center;
@@ -35,7 +37,7 @@
 		display:inline-block;
 		position:relative;
 		width:100%;
-		
+
 		&:after {
 			content:'';
 			display:block;
@@ -51,31 +53,30 @@
 				-moz-transform:rotate(-3deg);
 					-ms-transform:rotate(-3deg);
 						transform:rotate(-3deg);
-						
-						
-						
-			@include media($tablet){
+
+
+
+			@include media($tablet) {
 				height:2*($spacer-l);
 				top:-($spacer-l);
 			}
-			@include media($desktop){
+			@include media($desktop) {
 				height:2*($spacer-xl);
 				top:-($spacer-xl);
 			}
-			@include media($desktop-huge){
-				
-				
+			@include media($desktop-huge) {
+
+
 			}
-						
+
 		}
-		
+
 	}
 
 }
 
 .section--hero {
 	min-height:900px;
-	
 }
 
 .section--content {
@@ -83,7 +84,7 @@
 	background-color:white;
 	min-height:300px;
 
-	
+
 
 }
 
@@ -91,7 +92,55 @@
 // --------------------------------------------------
 
 .intro {
-	background-color:$dark-blue;
+
+	background-color: $dark-blue;
+
+	.section__inner-wrapper {
+		height:100%;
+		padding:0 $spacer-s;
+	}
+
+	.title-container {
+
+		color:white;
+		margin:0 auto;
+		padding:$spacer-s;
+		// border:$border-size-special solid white;
+		@include linear-gradient($gradient-pink-to-orange-1, $gradient-pink-to-orange-5);
+
+		@include media($medium-screen) {
+			@include vertical-align();
+		}
+
+		&__inner {
+			background-color:$dark-blue;
+			padding:$spacer-m;
+		}
+
+		img {
+			border:30px solid white;
+			border-bottom-width: 40px;
+			margin-top:-$spacer-xl;
+			margin-bottom:$spacer-l;
+			@include transform(rotate(2deg));
+			-webkit-backface-visibility:hidden;
+				backface-visibility: hidden;
+			box-shadow:0 1px 10px rgba(0,0,0,.75);
+		}
+
+		h1 {
+			text-transform: uppercase;
+
+			@include media($medium-screen) {
+				font-size:rem(60px);
+			}
+		}
+
+		p {
+			font-size:rem(30px);
+		}
+
+	}
 }
 
 // Story section
@@ -112,7 +161,7 @@
 // --------------------------------------------------
 
 .location {
-	
+
 	.map-placeholder {
 		background-color:$light-gray;
 		text-align:center;
@@ -121,18 +170,18 @@
 		max-width:500px;
 		position:relative;
 		margin:0 auto;
-		
+
 		img {
 			-webkit-filter:grayscale(100%);
 				filter:grayscale(100%);
 			transition: all $base-duration $base-timing;
 		}
-		
+
 		&:hover {
 			img {
 				-webkit-filter:grayscale(0);
 					filter:grayscale(0);
-			}	
+			}
 		}
 
 		.button-overlay {
@@ -145,17 +194,17 @@
 			align-items: center;
 		  justify-content: center;
 			cursor:pointer;
-			
+
 			button {
 				display: block;
 			}
-			
+
 			&:hover {
 				button {
 					@extend .hover-style;
 				}
 			}
-			
+
 		}
 
 	}
