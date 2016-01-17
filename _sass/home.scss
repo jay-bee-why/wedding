@@ -153,6 +153,29 @@
 			box-shadow:0 1px 10px rgba(0,0,0,.75);
 		}
 	}
+
+	.leaf {
+		position:absolute;
+	}
+	.leaf--1 {
+
+	}
+
+	.leaf--2 {
+		bottom:rem(100px);
+		right:rem(50px);
+		@include transform(rotate(-65deg));
+		-webkit-backface-visibility:hidden;
+			backface-visibility: hidden;
+	}
+
+	.leaf--3 {
+		bottom:rem(100px);
+		right:rem(-50px);
+		@include transform(rotate(-45deg));
+		-webkit-backface-visibility:hidden;
+			backface-visibility: hidden;
+	}
 }
 
 // Story section
@@ -228,10 +251,4 @@
 		}
 
 	}
-
 }
-
-
-// @include outer-container;
-// aside { @include span-columns(3); }
-// article { @include span-columns(9); }

@@ -494,6 +494,28 @@ footer {
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       box-shadow: 0 1px 10px rgba(0, 0, 0, 0.75); }
+  .intro .leaf {
+    position: absolute; }
+  .intro .leaf--2 {
+    bottom: 6.25rem;
+    right: 3.125rem;
+    -webkit-transform: rotate(-65deg);
+    -moz-transform: rotate(-65deg);
+    -ms-transform: rotate(-65deg);
+    -o-transform: rotate(-65deg);
+    transform: rotate(-65deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .intro .leaf--3 {
+    bottom: 6.25rem;
+    right: -3.125rem;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
 
 .eagle-rock {
   background: url("/img/cfaer-outside.jpg") center center no-repeat;
