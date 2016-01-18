@@ -7,16 +7,17 @@
 	.section__inner-wrapper {
 
 		position:relative;
+		height:100%;
 
 		@include outer-container;
 		text-align:center;
 		padding:$spacer-m $spacer-s;
 
-		@include media($tablet) {
+		@include media($medium-screen) {
 			padding:$spacer-l $spacer-m;
 		}
 
-		@include media($desktop) {
+		@include media($large-screen) {
 			padding:$spacer-xl 0;
 		}
 
@@ -51,19 +52,15 @@
 			left:-100%;
 			@include transform(rotate(-3deg));
 
-
-
-			@include media($tablet) {
+			@include media($medium-screen) {
 				height:2*($spacer-l);
 				top:-($spacer-l);
 			}
-			@include media($desktop) {
+			@include media($large-screen) {
 				height:2*($spacer-xl);
 				top:-($spacer-xl);
 			}
 			@include media($desktop-huge) {
-
-
 			}
 
 		}
@@ -73,29 +70,18 @@
 }
 
 .section--hero {
-	min-height:900px;
 
-	// @include media($medium-screen) {
-	// 	padding:$spacer-m 0;
-	// }
-	//
-	// @include media($large-screen) {
-	// 	padding:$spacer-xl 0;
-	// }
-
+	@include media($medium-screen) {
+		// padding:$spacer-l 0;
+	}
 	.section__inner-wrapper {
-		height:100%;
-		padding:0 $spacer-s;
+		padding:$spacer-m 0;
 	}
 
 	.title-container {
 		color:white;
 		margin:0 auto;
-		padding:$spacer-s;
-
-		@include media($desktop-huge) {
-			@include vertical-align();
-		}
+		padding:$spacer-s 0;
 
 		&__inner {
 			padding:$spacer-m;
@@ -104,25 +90,44 @@
 		.section--hero__title {
 			@extend .h1;
 			position:relative;
-
+			font-size:rem(50px);
+			font-size:16vw;
 			$z-index:1;
 			z-index:1;
 
 			&:after {
-				content: attr(data-text);
-				color: $gradient-pink-to-orange-4;
-			  left: 0;
-				right: -5px;
-			  position: absolute;
-			  top: 5px;
-				z-index:-$z-index;
+				content:'';
+				display:block;
+				width:100%;
+				background-color: $gradient-pink-to-orange-4;
+				height:10px;
 			}
 
 			@include media($medium-screen) {
 				line-height:1;
-				font-size:rem(175px);
+				font-size:rem(100px);
+				font-size:16vw;
 				margin-bottom:rem(30px);
+
+				&:after {
+					content: attr(data-text);
+					background-color:transparent;
+					color: $gradient-pink-to-orange-4;
+				  left: 0;
+					right: -5px;
+				  position: absolute;
+				  top: 5px;
+					z-index:-$z-index;
+					height:auto;
+					width:auto;
+				}
 			}
+
+			@include media($desktop-huge) {
+				font-size:rem(175px);
+			}
+
+
 		}
 
 		.section--hero__subtitle {
@@ -143,27 +148,60 @@
 
 	background-color: $dark-blue;
 
-	.title-container {
-
+	&:before {
+		content:'';
+		display:block;
+		position:absolute;
+		top:0;
+		width:100%;
+		height:$spacer-xl;
 		@include linear-gradient($gradient-pink-to-orange-1, $gradient-pink-to-orange-5);
+
+		@include media($medium-screen) {
+			display:none;
+		}
+	}
+
+	.section__inner-wrapper {
+		padding-top:$spacer-xl;
+		padding-bottom:0;
+
+		@include media($medium-screen) {
+			padding-bottom:2 * $spacer-xl;
+		}
+	}
+
+	.title-container {
+		background-color:transparent;
+		position:relative;
+
+		@include media($medium-screen) {
+			padding:$spacer-s;
+			@include linear-gradient($gradient-pink-to-orange-1, $gradient-pink-to-orange-5);
+		}
 
 		&__inner {
 			background-color:$dark-blue;
 		}
 
 		img {
-			border:30px solid white;
+			border:10px solid white;
 			margin-top:-$spacer-xl;
 			margin-bottom:$spacer-l - $spacer-m;
 			@include transform(rotate(2deg));
 			-webkit-backface-visibility:hidden;
 				backface-visibility: hidden;
 			box-shadow:0 1px 10px rgba(0,0,0,.75);
+
+			@include media($medium-screen) {
+				border:30px solid white;
+			}
 		}
 	}
 
 	.leaf {
 		position:absolute;
+		display:none;
 	}
 	.leaf--1 {
 
@@ -198,6 +236,12 @@
 .eagle-rock {
 	background:url("/img/cfaer-outside.jpg") center center no-repeat;
 	background-size:cover;
+
+	.title-container {
+		@include media($desktop-huge) {
+			@include vertical-align();
+		}
+	}
 
 	// We want the text shadow in this section only
 	.section--hero__title {
