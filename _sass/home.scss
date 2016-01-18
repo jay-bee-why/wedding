@@ -1,3 +1,61 @@
+// Typography
+// --------------------------------------------------
+
+h1,
+.h1 {
+	font-size:rem(50px);
+	font-size:16vw;
+
+	@include media($medium-screen) {
+		font-size:rem(100px);
+		font-size:16vw;
+	}
+
+	@include media($desktop-huge) {
+		font-size:rem(175px);
+	}
+}
+
+h2 {
+	font-size: rem(40);
+	margin-bottom:$spacer-s;
+	position:relative;
+
+	&:after {
+		content:'';
+		width:$spacer-m;
+		height:$border-size-special;
+		background-color:$gradient-pink-to-orange-2;
+		margin:($spacer-m - $spacer-xs) auto 0 auto;
+		display:block;
+		position:relative;
+
+	}
+
+	@include media($medium-screen) {
+		font-size:rem(80px);
+		margin-bottom:$spacer-m;
+	}
+}
+
+
+p {
+	margin-bottom:$spacer-s;
+	line-height:1.5;
+	@include media($medium-screen) {
+		margin-bottom:$spacer-m;
+	}
+}
+
+img,
+iframe {
+	display:block;
+	margin:0 auto $spacer-s auto;
+	@include media($medium-screen) {
+		margin-bottom:$spacer-m;
+	}
+}
+
 // General section styling
 // --------------------------------------------------
 .section {
@@ -20,16 +78,6 @@
 		@include media($large-screen) {
 			padding:$spacer-xl 0;
 		}
-
-			img {
-				display:block;
-				margin:0 auto;
-			}
-
-			iframe {
-				margin:0 auto;
-				display:block;
-			}
 	}
 
 	.section__punchout {
@@ -90,15 +138,11 @@
 		.section--hero__title {
 			@extend .h1;
 			position:relative;
-			font-size:rem(50px);
-			font-size:16vw;
 			$z-index:1;
 			z-index:$z-index;
 
 			@include media($medium-screen) {
 				line-height:1;
-				font-size:rem(100px);
-				font-size:16vw;
 				margin-bottom:rem(30px);
 
 				&:after {
@@ -114,17 +158,17 @@
 					width:auto;
 				}
 			}
-
-			@include media($desktop-huge) {
-				font-size:rem(175px);
-			}
 		}
 
 		.section--hero__subtitle {
-			font-size:rem(30px);
+			font-size:rem(22px);
 			position:relative;
 			$z-index:2;
 			z-index:$z-index;
+
+			@include media($medium-screen) {
+				font-size:rem(30px);
+			}
 
 			@include media($desktop-huge) {
 				text-shadow: 2px 2px 5px rgba(0, 0, 0, .35);
