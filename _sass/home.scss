@@ -1,3 +1,7 @@
+body {
+	background-color:$dark-blue;
+}
+
 // Typography
 // --------------------------------------------------
 
@@ -61,6 +65,7 @@ iframe {
 .section {
 
 	position:relative;
+	background-color:white;
 
 	.section__inner-wrapper {
 
@@ -99,6 +104,8 @@ iframe {
 			top:-($spacer-m);
 			left:-100%;
 			@include transform(rotate(-3deg));
+			-webkit-backface-visibility:hidden;
+				backface-visibility: hidden;
 
 			@include media($medium-screen) {
 				height:2*($spacer-l);

@@ -1,13 +1,41 @@
-$stripe-size: 60px;
+$stripe-size: $spacer-l;
 
 footer {
 	position:relative;
+	display:block;
+	height:5 * $stripe-size;
+
+	&:before {
+		content:'';
+		top:0;
+		width:100%;
+		height:50%;
+		display:block;
+		background-color:white;
+		left:0;
+		position:absolute;
+	}
+}
+
+.stripe-wrapper {
+	right:-50%;
+	top:0;
+	display:inline-block;
+	position:relative;
+	width:100%;
 }
 
 .stripe-container {
-	width:100%;
+	width:200%;
 	display:block;
-	top:$stripe-size;
+	margin:0 auto;
+	position:absolute;
+	top:-($spacer-m);
+	left:-100%;
+	@include transform(rotate(-3deg));
+	-webkit-backface-visibility:hidden;
+		backface-visibility: hidden;
+
 }
 
 .stripe {
@@ -15,7 +43,7 @@ footer {
 	position:relative;
 	height:$stripe-size;
 	display:block;
-	
+
 	&:nth-child(1){
 		background-color:$gradient-pink-to-orange-1;
 	}
@@ -32,4 +60,3 @@ footer {
 		background-color:$gradient-pink-to-orange-5;
 	}
 }
-
