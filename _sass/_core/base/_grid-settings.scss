@@ -12,3 +12,15 @@ $large-screen: 900px;
 
 $medium-screen: new-breakpoint(min-width $medium-screen);
 $large-screen: new-breakpoint(min-width $large-screen);
+
+// Mobile only
+$mobile: new-breakpoint(max-width 480px 4);
+
+// Tablet size and larger
+$tablet: new-breakpoint(min-width 481px 4);
+
+// Desktop size and larger
+$desktop: new-breakpoint(min-width 787px 4);
+
+// Big-ass desktop
+$desktop-huge: new-breakpoint(min-width 1160px);

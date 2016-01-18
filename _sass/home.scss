@@ -12,11 +12,11 @@
 		text-align:center;
 		padding:$spacer-m $spacer-s;
 
-		@include media($tablet){
+		@include media($tablet) {
 			padding:$spacer-l $spacer-m;
 		}
 
-		@include media($desktop){
+		@include media($desktop) {
 			padding:$spacer-xl 0;
 		}
 
@@ -75,6 +75,14 @@
 .section--hero {
 	min-height:900px;
 
+	// @include media($medium-screen) {
+	// 	padding:$spacer-m 0;
+	// }
+	//
+	// @include media($large-screen) {
+	// 	padding:$spacer-xl 0;
+	// }
+
 	.section__inner-wrapper {
 		height:100%;
 		padding:0 $spacer-s;
@@ -85,7 +93,7 @@
 		margin:0 auto;
 		padding:$spacer-s;
 
-		@include media($medium-screen) {
+		@include media($desktop-huge) {
 			@include vertical-align();
 		}
 
