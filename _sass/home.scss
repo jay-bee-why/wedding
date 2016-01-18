@@ -93,7 +93,7 @@
 			font-size:rem(50px);
 			font-size:16vw;
 			$z-index:1;
-			z-index:1;
+			z-index:$z-index;
 
 			@include media($medium-screen) {
 				line-height:1;
@@ -122,6 +122,13 @@
 
 		.section--hero__subtitle {
 			font-size:rem(30px);
+			position:relative;
+			$z-index:2;
+			z-index:$z-index;
+
+			@include media($desktop-huge) {
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, .35);
+			}
 		}
 	}
 }
@@ -199,28 +206,92 @@
 		}
 	}
 
+	$leaf-1-width:500px;
+	$leaf-1-height:1198px;
+
+	$leaf-2-width:500px;
+	$leaf-2-height:1252px;
+
+	$leaf-3-width:500px;
+	$leaf-3-height:721px;
+
 	.leaf {
+
 		position:absolute;
 		display:none;
+
+		@include media($desktop-huge) {
+			display:block;
+		}
 	}
+
 	.leaf--1 {
 
+		$leaf-width: $leaf-1-width;
+		$leaf-height: $leaf-1-height;
+
+		background:url(/img/leaf-left--1.png) center center no-repeat transparent;
+		background-size:contain;
+		bottom:rem(0);
+		left:rem(40px);
+
+		width: $leaf-width / 3;
+		height:$leaf-height / 3;
+
+		@include transform(rotate(20deg));
+		-webkit-backface-visibility:hidden;
+			backface-visibility: hidden;
+
+		@include media($desktop-huge) {
+			width: $leaf-width / 2;
+			height:$leaf-height / 2;
+		}
 	}
 
 	.leaf--2 {
-		bottom:rem(100px);
-		right:rem(50px);
-		@include transform(rotate(-65deg));
+
+		$leaf-width: $leaf-2-width;
+		$leaf-height: $leaf-2-height;
+
+		background:url(/img/leaf-left--2.png) center center no-repeat transparent;
+		background-size:contain;
+		bottom:rem(-60px);
+		left:18.75rem;
+
+		width: $leaf-width / 3;
+		height:$leaf-height / 3;
+
+		@include transform(rotate(-9deg));
 		-webkit-backface-visibility:hidden;
 			backface-visibility: hidden;
+
+		@include media($desktop-huge) {
+			width: $leaf-width / 2;
+			height:$leaf-height / 2;
+		}
 	}
 
 	.leaf--3 {
-		bottom:rem(100px);
-		right:rem(-50px);
-		@include transform(rotate(-45deg));
+
+		$leaf-width: $leaf-3-width;
+		$leaf-height: $leaf-3-height;
+
+		background:url(/img/leaf-right.png) center center no-repeat transparent;
+		background-size:contain;
+		bottom:rem(0);
+		right:rem(0);
+
+		width: $leaf-width / 3;
+		height:$leaf-height / 3;
+
+		@include transform(rotate(0deg));
 		-webkit-backface-visibility:hidden;
 			backface-visibility: hidden;
+
+		@include media($desktop-huge) {
+			width: $leaf-width;
+			height:$leaf-height;
+		}
 	}
 }
 

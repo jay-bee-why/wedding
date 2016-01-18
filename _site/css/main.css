@@ -468,7 +468,12 @@ footer {
       .section--hero .title-container .section--hero__title {
         font-size: 10.9375rem; } }
   .section--hero .title-container .section--hero__subtitle {
-    font-size: 1.875rem; }
+    font-size: 1.875rem;
+    position: relative;
+    z-index: 2; }
+    @media screen and (min-width: 1160px) {
+      .section--hero .title-container .section--hero__subtitle {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35); } }
 
 .section--content {
   background-color: white;
@@ -530,26 +535,63 @@ footer {
   .intro .leaf {
     position: absolute;
     display: none; }
+    @media screen and (min-width: 1160px) {
+      .intro .leaf {
+        display: block; } }
+  .intro .leaf--1 {
+    background: url(/img/leaf-left--1.png) center center no-repeat transparent;
+    background-size: contain;
+    bottom: 0rem;
+    left: 2.5rem;
+    width: 166.66667px;
+    height: 399.33333px;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    transform: rotate(20deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+    @media screen and (min-width: 1160px) {
+      .intro .leaf--1 {
+        width: 250px;
+        height: 599px; } }
   .intro .leaf--2 {
-    bottom: 6.25rem;
-    right: 3.125rem;
-    -webkit-transform: rotate(-65deg);
-    -moz-transform: rotate(-65deg);
-    -ms-transform: rotate(-65deg);
-    -o-transform: rotate(-65deg);
-    transform: rotate(-65deg);
+    background: url(/img/leaf-left--2.png) center center no-repeat transparent;
+    background-size: contain;
+    bottom: -3.75rem;
+    left: 18.75rem;
+    width: 166.66667px;
+    height: 417.33333px;
+    -webkit-transform: rotate(-9deg);
+    -moz-transform: rotate(-9deg);
+    -ms-transform: rotate(-9deg);
+    -o-transform: rotate(-9deg);
+    transform: rotate(-9deg);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
+    @media screen and (min-width: 1160px) {
+      .intro .leaf--2 {
+        width: 250px;
+        height: 626px; } }
   .intro .leaf--3 {
-    bottom: 6.25rem;
-    right: -3.125rem;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    background: url(/img/leaf-right.png) center center no-repeat transparent;
+    background-size: contain;
+    bottom: 0rem;
+    right: 0rem;
+    width: 166.66667px;
+    height: 240.33333px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
+    @media screen and (min-width: 1160px) {
+      .intro .leaf--3 {
+        width: 500px;
+        height: 721px; } }
 
 .eagle-rock {
   background: url("/img/cfaer-outside.jpg") center center no-repeat;
