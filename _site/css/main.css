@@ -447,12 +447,6 @@ footer {
     font-size: 3.125rem;
     font-size: 16vw;
     z-index: 1; }
-    .section--hero .title-container .section--hero__title:after {
-      content: '';
-      display: block;
-      width: 100%;
-      background-color: #F57F3A;
-      height: 10px; }
     @media screen and (min-width: 600px) {
       .section--hero .title-container .section--hero__title {
         line-height: 1;
@@ -527,6 +521,12 @@ footer {
       @media screen and (min-width: 600px) {
         .intro .title-container img {
           border: 30px solid white; } }
+  .intro .section--hero__title:after {
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: #F57F3A;
+    height: 10px; }
   .intro .leaf {
     position: absolute;
     display: none; }
@@ -554,15 +554,26 @@ footer {
 .eagle-rock {
   background: url("/img/cfaer-outside.jpg") center center no-repeat;
   background-size: cover; }
-  @media screen and (min-width: 1160px) {
-    .eagle-rock .title-container {
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); } }
-  .eagle-rock .section--hero__title:after {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35); }
+  .eagle-rock .title-container {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .eagle-rock .section--hero__title {
+    display: inline-block;
+    padding: 3vw;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
+    background-color: #F53E7A;
+    background-image: -webkit-linear-gradient(#F53E7A, #F59723);
+    background-image: linear-gradient(#F53E7A, #F59723); }
+    @media screen and (min-width: 600px) {
+      .eagle-rock .section--hero__title {
+        padding: 0;
+        display: block;
+        background: none; }
+        .eagle-rock .section--hero__title:after {
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35); } }
 
 .location .map-placeholder {
   background-color: #ddd;

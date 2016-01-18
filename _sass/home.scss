@@ -95,14 +95,6 @@
 			$z-index:1;
 			z-index:1;
 
-			&:after {
-				content:'';
-				display:block;
-				width:100%;
-				background-color: $gradient-pink-to-orange-4;
-				height:10px;
-			}
-
 			@include media($medium-screen) {
 				line-height:1;
 				font-size:rem(100px);
@@ -126,8 +118,6 @@
 			@include media($desktop-huge) {
 				font-size:rem(175px);
 			}
-
-
 		}
 
 		.section--hero__subtitle {
@@ -199,6 +189,16 @@
 		}
 	}
 
+	.section--hero__title {
+		&:after {
+			content:'';
+			display:block;
+			width:100%;
+			background-color: $gradient-pink-to-orange-4;
+			height:10px;
+		}
+	}
+
 	.leaf {
 		position:absolute;
 		display:none;
@@ -238,18 +238,29 @@
 	background-size:cover;
 
 	.title-container {
-		@include media($desktop-huge) {
-			@include vertical-align();
-		}
+		@include vertical-align();
+		// @include media($desktop-huge) {
+		// 	@include vertical-align();
+		// }
 	}
 
 	// We want the text shadow in this section only
 	.section--hero__title {
-		&:after {
-			text-shadow: 2px 2px 5px rgba(0, 0, 0, .35);
+		display:inline-block;
+		padding:3vw;
+		text-shadow: 1px 1px 3px rgba(0, 0, 0, .35);
+		@include linear-gradient($gradient-pink-to-orange-1, $gradient-pink-to-orange-5);
+
+		@include media($medium-screen) {
+			padding:0;
+			display:block;
+			background:none;
+
+			&:after {
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, .35);
+			}
 		}
 	}
-
 }
 
 // Location section
