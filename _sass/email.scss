@@ -1,0 +1,15 @@
+.email {
+  h2 {
+    @include media($medium-screen) {
+      margin-bottom:$spacer-l;
+    }
+  }
+  input[type="submit"] {
+    @extend .hover-style--raise;
+    border:0;
+    margin:$spacer-m auto;
+  }
+  #mc_embed_signup {
+    @include clearfix;
+  }
+}

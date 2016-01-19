@@ -9,5 +9,12 @@ layout: default
 
 	.section__inner-wrapper
 
+		a.breadcrumb ‹ Back to the home page
+
 		h2 Stay informed
-		p Sign up for our email newsletter and we'll give you any last minute updates on stuff
+		p
+			' Sign up for our email list and we'll send you updates about the
+			' wedding.
+			{% include mailchimp.html %}
+
+		a.breadcrumb ‹ Back to the home page
