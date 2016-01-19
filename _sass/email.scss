@@ -8,6 +8,7 @@
     @extend .hover-style--raise;
     border:0;
     margin:$spacer-m auto;
+    border-radius:0;
   }
   #mc_embed_signup {
     @include clearfix;
