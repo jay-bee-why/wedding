@@ -12,7 +12,7 @@
 
 // Typography
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic);
 @font-face {font-family:"ca-recape";
     src: url("/fonts/da6470da2d566f1ad804cbfa4beb5e26.eot"); /* IE9*/
     src: url("/fonts/da6470da2d566f1ad804cbfa4beb5e26.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
@@ -21,7 +21,7 @@
     url("/fonts/da6470da2d566f1ad804cbfa4beb5e26.svg#CARecapeW00-Regular") format("svg"); /* iOS 4.1- */
 }
 
-$base-font-family:'Montserrat', 'helvetica', sans-serif;
+$base-font-family:'Open Sans', 'helvetica', sans-serif;
 $heading-font-family: 'ca-recape', 'Montserrat', 'helvetica', sans-serif;
 
 // Font Sizes

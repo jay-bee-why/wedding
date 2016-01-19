@@ -46,6 +46,9 @@ h2 {
 p {
 	margin-bottom:$spacer-s;
 	line-height:1.5;
+  strong {
+    font-weight: 700;
+  }
 	@include media($medium-screen) {
 		margin-bottom:$spacer-m;
 	}
@@ -172,6 +175,7 @@ iframe {
 			position:relative;
 			$z-index:2;
 			z-index:$z-index;
+			letter-spacing: rem(1);
 
 			@include media($medium-screen) {
 				font-size:rem(30px);
@@ -254,6 +258,13 @@ iframe {
 			width:100%;
 			background-color: $gradient-pink-to-orange-4;
 			height:10px;
+		}
+	}
+
+	.section--hero__subtitle {
+		font-weight:700;
+		&:nth-of-type(1) {
+			margin-bottom:rem($small-spacing);
 		}
 	}
 
@@ -380,6 +391,7 @@ iframe {
 
 			&:after {
 				text-shadow: 2px 2px 5px rgba(0, 0, 0, .35);
+				color:$gradient-pink-to-orange-2 !important;
 			}
 		}
 	}
