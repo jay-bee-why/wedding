@@ -602,6 +602,8 @@ iframe {
       box-shadow: 0 1px 10px rgba(0, 0, 0, 0.75); }
       @media screen and (min-width: 600px) {
         .intro .title-container img {
+          height: 28.75rem;
+          height: 60vh;
           border: 30px solid white; } }
   .intro .section--hero__title:after {
     content: '';
@@ -684,6 +686,7 @@ iframe {
     margin-right: 0; }
   @media screen and (min-width: 600px) {
     .story p {
+      font-size: 1.125rem;
       float: left;
       display: block;
       margin-right: 2.35765%;
