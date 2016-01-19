@@ -42,6 +42,12 @@ h2 {
 	}
 }
 
+h3 {
+	font-size:rem(14px);
+	font-family: $base-font-family;
+	text-transform: uppercase;
+	color:$medium-gray;
+}
 
 p {
 	margin-bottom:$spacer-s;
@@ -425,21 +431,23 @@ form {
 		// }
 	}
 
-	// We want the text shadow in this section only
-	.section--hero__title {
-		display:inline-block;
-		padding:3vw;
-		text-shadow: 1px 1px 3px rgba(0, 0, 0, .35);
-		@include linear-gradient($gradient-pink-to-orange-1, $gradient-pink-to-orange-5);
+	.title-container {
+		// We want the text shadow in this section only
+		.section--hero__title {
+			display:inline-block;
+			padding:3vw;
+			text-shadow: 1px 1px 3px rgba(0, 0, 0, .35);
+			@include linear-gradient($gradient-pink-to-orange-1, $gradient-pink-to-orange-5);
 
-		@include media($medium-screen) {
-			padding:0;
-			display:block;
-			background:none;
+			@include media($medium-screen) {
+				padding:0;
+				display:block;
+				background:none;
 
-			&:after {
-				text-shadow: 2px 2px 5px rgba(0, 0, 0, .35);
-				color:$gradient-pink-to-orange-2 !important;
+				&:after {
+					text-shadow: 2px 2px 5px rgba(0, 0, 0, .35);
+					color:$gradient-pink-to-orange-2;
+				}
 			}
 		}
 	}
@@ -449,6 +457,21 @@ form {
 // --------------------------------------------------
 
 .location {
+
+	.location__info {
+		@include outer-container;
+	}
+
+	.tips {
+		@include span-columns(12);
+		@include clearfix;
+
+		@include media($medium-screen) {
+			font-size:rem(18px);
+			@include span-columns(8);
+			@include shift(2);
+		}
+	}
 
 	.map-placeholder {
 		background-color:$light-gray;
@@ -482,13 +505,13 @@ form {
 			align-items: center;
 		  justify-content: center;
 			cursor:pointer;
+			@extend .hover-style--large;
 
 			button {
 				display: block;
-				@extend .hover-style--large;
+
 			}
 
 		}
-
 	}
 }
