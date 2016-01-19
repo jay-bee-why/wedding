@@ -450,6 +450,11 @@ p {
   @media screen and (min-width: 600px) {
     p {
       margin-bottom: 1.875rem; } }
+  p a {
+    font-weight: 700;
+    color: inherit; }
+    p a:hover {
+      color: #F56058; }
 
 img,
 iframe {

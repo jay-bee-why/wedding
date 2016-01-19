@@ -52,6 +52,14 @@ p {
 	@include media($medium-screen) {
 		margin-bottom:$spacer-m;
 	}
+
+	a {
+		font-weight: 700;
+		color:inherit;
+		&:hover {
+			color:$gradient-pink-to-orange-2;
+		}
+	}
 }
 
 img,
