@@ -278,8 +278,13 @@ form {
 
 			@include media($medium-screen) {
 				height:rem(460px);
-				height:60vh;
+				height:35vh ;
+				border:20px solid white;
+			}
+
+			@include media($desktop-huge) {
 				border:30px solid white;
+				height:50vh;
 			}
 		}
 	}
