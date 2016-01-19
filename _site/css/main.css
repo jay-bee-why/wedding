@@ -674,6 +674,24 @@ iframe {
         width: 500px;
         height: 721px; } }
 
+.story p {
+  text-align: left;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .story p:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 600px) {
+    .story p {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%; }
+      .story p:last-child {
+        margin-right: 0; } }
+
 .eagle-rock {
   background: url("/img/cfaer-outside.jpg") center center no-repeat;
   background-size: cover; }

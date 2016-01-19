@@ -361,6 +361,15 @@ iframe {
 // --------------------------------------------------
 
 .story {
+	p {
+		text-align:left;
+		@include span-columns(12);
+
+		@include media($medium-screen) {
+			@include span-columns(8);
+			@include shift(2);
+		}
+	}
 }
 
 // Eagle Rock section
