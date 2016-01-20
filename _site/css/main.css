@@ -755,6 +755,9 @@ form {
       padding: 1.875rem 0 3.75rem 0; } }
   .story img:last-child {
     padding-bottom: 0; }
+.story img.photo-booth {
+  max-width: 12.5rem;
+  width: 100%; }
 .story img.graduation {
   max-width: 31.25rem;
   width: 100%; }
@@ -792,6 +795,9 @@ form {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (min-width: 600px) {
+    .location .location__info {
+      font-size: 1.125rem; } }
 .location .tips {
   float: left;
   display: block;
@@ -805,7 +811,6 @@ form {
     display: table; }
   @media screen and (min-width: 600px) {
     .location .tips {
-      font-size: 1.125rem;
       float: left;
       display: block;
       margin-right: 2.35765%;

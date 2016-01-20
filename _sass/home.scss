@@ -428,6 +428,11 @@ form {
 		}
 	}
 
+	img.photo-booth {
+		max-width:rem(200px);
+		width:100%;
+	}
+
 	img.graduation {
 		max-width:rem(500px);
 		width:100%;
@@ -477,6 +482,9 @@ form {
 
 	.location__info {
 		@include outer-container;
+		@include media($medium-screen) {
+			font-size:rem(18px);
+		}
 	}
 
 	.tips {
@@ -484,7 +492,6 @@ form {
 		@include clearfix;
 
 		@include media($medium-screen) {
-			font-size:rem(18px);
 			@include span-columns(8);
 			@include shift(2);
 		}
