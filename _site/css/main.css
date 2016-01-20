@@ -733,6 +733,10 @@ form {
   width: 100%; }
   .story p:last-child {
     margin-right: 0; }
+  .story p::after {
+    clear: both;
+    content: "";
+    display: table; }
   @media screen and (min-width: 600px) {
     .story p {
       font-size: 1.125rem;
@@ -743,6 +747,17 @@ form {
       margin-left: 17.05961%; }
       .story p:last-child {
         margin-right: 0; } }
+.story img {
+  padding: 0 0 1.875rem 0;
+  margin: 0 auto; }
+  @media screen and (min-width: 600px) {
+    .story img {
+      padding: 1.875rem 0 3.75rem 0; } }
+  .story img:last-child {
+    padding-bottom: 0; }
+.story img.graduation {
+  max-width: 31.25rem;
+  width: 100%; }
 
 .eagle-rock {
   background: url("/img/cfaer-outside.jpg") center center no-repeat;
