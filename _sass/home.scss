@@ -62,6 +62,7 @@ p {
 	a {
 		font-weight: 700;
 		color:inherit;
+		border-bottom:2px solid $gradient-pink-to-orange-2;
 		&:hover {
 			color:$gradient-pink-to-orange-2;
 		}

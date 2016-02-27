@@ -407,7 +407,8 @@ p.colophon {
     p.colophon {
       padding: 1.875rem 0; } }
   p.colophon a {
-    color: #F57F3A; }
+    color: #F57F3A;
+    border-bottom: none; }
 
 body {
   background-color: #000033; }
@@ -462,7 +463,8 @@ p {
       margin-bottom: 1.875rem; } }
   p a {
     font-weight: 700;
-    color: inherit; }
+    color: inherit;
+    border-bottom: 2px solid #F56058; }
     p a:hover {
       color: #F56058; }
 
