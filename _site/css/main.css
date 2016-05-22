@@ -820,6 +820,9 @@ form {
       margin-left: 17.05961%; }
       .location .tips:last-child {
         margin-right: 0; } }
+  .location .tips span {
+    text-transform: uppercase;
+    color: #989898; }
 .location .map-placeholder {
   background-color: #ddd;
   text-align: center;
