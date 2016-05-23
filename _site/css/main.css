@@ -530,17 +530,14 @@ form {
     @media screen and (min-width: 900px) {
       .section .section__inner-wrapper {
         padding: 6.25rem 0; } }
-  .section .section__inner-wrapper +
-  .section__inner-wrapper {
-    padding-top: 0; }
-    @media screen and (min-width: 600px) {
-      .section .section__inner-wrapper +
-      .section__inner-wrapper {
-        padding-top: 0; } }
-    @media screen and (min-width: 900px) {
-      .section .section__inner-wrapper +
-      .section__inner-wrapper {
-        padding-top: 0; } }
+  @media screen and (min-width: 600px) {
+    .section .section__inner-wrapper +
+    .section__inner-wrapper {
+      padding-top: 1.875rem; } }
+  @media screen and (min-width: 900px) {
+    .section .section__inner-wrapper +
+    .section__inner-wrapper {
+      padding-top: 1.875rem; } }
   .section .section__punchout {
     right: -50%;
     top: 0;
@@ -615,6 +612,53 @@ form {
 .section--content {
   background-color: white;
   min-height: 300px; }
+
+.section--menu {
+  background-color: #F53E7A; }
+  @media screen and (min-width: 600px) {
+    .section--menu {
+      background-color: #000033; } }
+
+nav {
+  text-align: center;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  nav::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (min-width: 600px) {
+    nav {
+      text-align: left; } }
+  nav a {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    padding: 0.625rem 0;
+    margin-right: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none; }
+    nav a:hover {
+      color: rgba(0, 0, 0, 0.5); }
+    @media screen and (min-width: 600px) {
+      nav a {
+        display: none;
+        color: rgba(255, 255, 255, 0.6);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+        padding: 1.25rem 0 0.625rem;
+        margin-right: 1.875rem;
+        cursor: pointer; }
+        nav a:hover {
+          color: #F53E7A;
+          border-bottom: 2px solid #F53E7A; } }
+  nav .nav-desktop {
+    display: none; }
+    @media screen and (min-width: 600px) {
+      nav .nav-desktop {
+        display: inline-block; } }
 
 .intro {
   background-color: #000033; }

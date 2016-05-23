@@ -130,14 +130,13 @@ form {
 
 	.section__inner-wrapper +
 	.section__inner-wrapper { // subsequent inner wrappers
-		padding-top:0;
 
 		@include media($medium-screen) {
-			padding-top:0;
+			padding-top:$spacer-m ;
 		}
 
 		@include media($large-screen) {
-			padding-top:0;
+			padding-top:$spacer-m ;
 		}
 	}
 
@@ -245,6 +244,66 @@ form {
 	background-color:white;
 	min-height:300px;
 }
+
+// Nav
+// --------------------------------------------------
+.section--menu {
+	background-color:$gradient-pink-to-orange-1;
+
+	@include media($medium-screen) {
+		background-color:$dark-blue;
+	}
+}
+
+nav {
+	text-align: center;
+	@include outer-container;
+
+	@include media($medium-screen) {
+		text-align: left;
+	}
+
+	$nav-mobile-black: rgba(0,0,0,.5);
+
+	a {
+		display: inline-block;
+		color: $nav-mobile-black;
+		font-weight:700;
+		padding: $spacer-xxs 0;
+		margin-right: 0;
+		border-bottom:2px solid $nav-mobile-black;
+
+		@include transition(none);
+
+		&:hover {
+			color: $nav-mobile-black;
+		}
+
+		$nav-mobile-white: rgba(255,255,255,.6);
+
+		@include media($medium-screen) {
+			display:none;
+			color:$nav-mobile-white;
+			border-bottom:2px solid $nav-mobile-white;
+			padding: $spacer-s 0 $spacer-xxs;
+			margin-right: $spacer-m;
+			cursor: pointer;
+
+			&:hover {
+				color: $gradient-pink-to-orange-1;
+				border-bottom: 2px solid $gradient-pink-to-orange-1;
+			}
+		}
+	}
+	.nav-desktop {
+		display:none;
+
+		@include media($medium-screen) {
+			display:inline-block;
+		}
+	}
+}
+
 
 // Intro section
 // --------------------------------------------------

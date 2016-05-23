@@ -2,6 +2,14 @@
 layout: default
 ---
 
+.section.section--menu
+	nav
+		a href="#ceremony" Skip to the details ↓
+		a.nav-desktop href="#our-story"  Our Story
+		a.nav-desktop href="#ceremony"  Ceremony Details
+		a.nav-desktop href="#travel"  Travel and Lodging
+
+
 /! Hero section
 /! ---------------------------
 
@@ -14,7 +22,8 @@ layout: default
 				h1.section--hero__title data-text="Save the date!"
 					' Save the date!
 				p.section--hero__subtitle Jordan and Justin are getting married
-				p.section--hero__subtitle September 24th, 2016
+				p.section--hero__subtitle September 24th, 2016 in Los Angeles
+
 	.leaf.leaf--1
 	.leaf.leaf--2
 	.leaf.leaf--3
@@ -26,7 +35,7 @@ layout: default
 
 	.section__punchout
 
-	.section__inner-wrapper
+	.section__inner-wrapper#our-story
 
 		h2 Our story
 
@@ -52,7 +61,7 @@ layout: default
 
 	.section__punchout
 
-	.section__inner-wrapper
+	.section__inner-wrapper#ceremony
 
 		h2 Ceremony + Reception
 
@@ -71,7 +80,7 @@ layout: default
 				a.button-overlay href="https://goo.gl/maps/JW67QdisHaD2" title="Google Maps" target="_blank"
 					button View map
 
-	.section__inner-wrapper
+	.section__inner-wrapper#travel
 
 		h2 Travel + Lodging
 
