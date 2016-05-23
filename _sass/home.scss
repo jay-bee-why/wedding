@@ -43,10 +43,12 @@ h2 {
 }
 
 h3 {
-	font-size:rem(14px);
 	font-family: $base-font-family;
+	font-size: $base-font-size;
 	text-transform: uppercase;
 	color:$medium-gray;
+	margin-bottom:$spacer-s;
+	line-height:1.5;
 }
 
 p {
@@ -123,6 +125,19 @@ form {
 
 		@include media($large-screen) {
 			padding:$spacer-xl 0;
+		}
+	}
+
+	.section__inner-wrapper +
+	.section__inner-wrapper { // subsequent inner wrappers
+		padding-top:0;
+
+		@include media($medium-screen) {
+			padding-top:0;
+		}
+
+		@include media($large-screen) {
+			padding-top:0;
 		}
 	}
 
@@ -402,10 +417,11 @@ form {
 	}
 }
 
-// Story section
+// Content sections
 // --------------------------------------------------
 
-.story {
+.content {
+	h3,
 	p {
 		text-align:left;
 		@include span-columns(12);
@@ -417,6 +433,23 @@ form {
 			@include shift(2);
 		}
 	}
+
+	h3 {
+		text-align: center;
+		@include media($medium-screen) {
+			margin-top: $spacer-m;
+		}
+	}
+
+	.center {
+		text-align: center;
+	}
+}
+
+// Story section
+// --------------------------------------------------
+
+.story {
 
 	img {
 		padding:0 0 $spacer-m 0;
@@ -481,25 +514,13 @@ form {
 
 .location {
 
-	.location__info {
-		@include outer-container;
-		@include media($medium-screen) {
-			font-size:rem(18px);
-		}
-	}
-
-	.tips {
+	.map-placeholder__row {
 		@include span-columns(12);
 		@include clearfix;
 
 		@include media($medium-screen) {
 			@include span-columns(8);
 			@include shift(2);
-		}
-
-		span {
-				text-transform: uppercase;
-				color: $medium-gray;
 		}
 	}
 
@@ -516,6 +537,7 @@ form {
 			-webkit-filter:grayscale(100%);
 				filter:grayscale(100%);
 			transition: all $base-duration $base-timing;
+			margin:0;
 		}
 
 		&:hover {
