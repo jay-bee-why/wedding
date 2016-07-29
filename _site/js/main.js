@@ -22,6 +22,7 @@ var details_link = $("#details-link");
 var story_link = $("#story-link");
 var ceremony_link = $("#ceremony-link");
 var travel_link = $("#travel-link");
+var registry_link = $("#registry-link");
 
 details_link.click(function(){
 	body.animate({
@@ -45,6 +46,13 @@ ceremony_link.click(function(){
 });
 
 travel_link.click(function(){
+	body.animate({
+      scrollTop: $( $.attr(this, 'href') ).offset().top
+  }, 500);
+  return false;
+});
+
+registry_link.click(function(){
 	body.animate({
       scrollTop: $( $.attr(this, 'href') ).offset().top
   }, 500);

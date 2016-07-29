@@ -597,6 +597,10 @@ nav {
 				filter:grayscale(100%);
 			transition: all $base-duration $base-timing;
 			margin:0;
+			-webkit-transform: translateZ(0) scale(1.0, 1.0);
+				transform: translateZ(0) scale(1.0, 1.0);
+			-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
 		}
 
 		&:hover {
@@ -625,4 +629,48 @@ nav {
 
 		}
 	}
+}
+
+// Location section
+// --------------------------------------------------
+
+.registry__row {
+	@include span-columns(12);
+	@include clearfix;
+
+	@include media($medium-screen) {
+		@include span-columns(8);
+		@include shift(2);
+	}
+}
+
+.registry {
+	display: inline-block;
+	padding: $spacer-m;
+	text-align: center;
+	border: $border-size-special solid $gradient-pink-to-orange-4;
+	cursor: pointer;
+	color: $gradient-pink-to-orange-4;
+	font-weight: bold;
+	transition: all $base-duration $base-timing;
+	margin-bottom: $spacer-m;
+
+	&:hover {
+		border-color: $gradient-pink-to-orange-2;
+		color: $gradient-pink-to-orange-2;
+		box-shadow: 0 2px 5px rgba(0,0,0,.25);
+	}
+
+	&:active {
+		color: $gradient-pink-to-orange-2;
+	}
+
+	&:first-child {
+		margin-right: 0;
+
+		@include media($large-screen) {
+			margin-right: $spacer-m;
+		}
+	}
+	// @include linear-gradient($gradient-pink-to-orange-1, $gradient-pink-to-orange-5);
 }

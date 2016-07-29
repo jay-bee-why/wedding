@@ -891,7 +891,11 @@ nav {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: all 0.25s ease;
-    margin: 0; }
+    margin: 0;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    transform: translateZ(0) scale(1, 1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
   .location .map-placeholder:hover img {
     -webkit-filter: grayscale(0);
     filter: grayscale(0); }
@@ -907,6 +911,49 @@ nav {
     cursor: pointer; }
     .location .map-placeholder .button-overlay button {
       display: block; }
+
+.registry__row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .registry__row:last-child {
+    margin-right: 0; }
+  .registry__row::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (min-width: 600px) {
+    .registry__row {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%; }
+      .registry__row:last-child {
+        margin-right: 0; } }
+
+.registry {
+  display: inline-block;
+  padding: 1.875rem;
+  text-align: center;
+  border: 5px solid #F57F3A;
+  cursor: pointer;
+  color: #F57F3A;
+  font-weight: bold;
+  transition: all 0.25s ease;
+  margin-bottom: 1.875rem; }
+  .registry:hover {
+    border-color: #F56058;
+    color: #F56058;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); }
+  .registry:active {
+    color: #F56058; }
+  .registry:first-child {
+    margin-right: 0; }
+    @media screen and (min-width: 900px) {
+      .registry:first-child {
+        margin-right: 1.875rem; } }
 
 @media screen and (min-width: 600px) {
   .email h2 {
