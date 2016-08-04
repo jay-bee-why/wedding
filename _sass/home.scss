@@ -401,7 +401,7 @@ nav {
 		position:absolute;
 		display:none;
 
-		@include media($desktop-huge) {
+		@include media($tablet) {
 			display:block;
 		}
 	}

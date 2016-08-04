@@ -726,7 +726,7 @@ nav {
   .intro .leaf {
     position: absolute;
     display: none; }
-    @media screen and (min-width: 1160px) {
+    @media screen and (min-width: 481px) {
       .intro .leaf {
         display: block; } }
   .intro .leaf--1 {
