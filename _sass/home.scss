@@ -641,11 +641,19 @@ nav {
 	@include media($medium-screen) {
 		@include span-columns(8);
 		@include shift(2);
+
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 	}
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .registry {
-	display: inline-block;
+	// display: inline-block;
 	padding: $spacer-m;
 	text-align: center;
 	border: $border-size-special solid $gradient-pink-to-orange-4;

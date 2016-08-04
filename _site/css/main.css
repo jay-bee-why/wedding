@@ -916,7 +916,10 @@ nav {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
   .registry__row:last-child {
     margin-right: 0; }
   .registry__row::after {
@@ -929,12 +932,14 @@ nav {
       display: block;
       margin-right: 2.35765%;
       width: 65.88078%;
-      margin-left: 17.05961%; }
+      margin-left: 17.05961%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
       .registry__row:last-child {
         margin-right: 0; } }
 
 .registry {
-  display: inline-block;
   padding: 1.875rem;
   text-align: center;
   border: 5px solid #F57F3A;
