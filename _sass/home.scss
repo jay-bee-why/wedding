@@ -672,5 +672,9 @@ nav {
 			margin-right: $spacer-m;
 		}
 	}
+
+	img {
+		max-height: $spacer-xl;
+	}
 	// @include linear-gradient($gradient-pink-to-orange-1, $gradient-pink-to-orange-5);
 }
