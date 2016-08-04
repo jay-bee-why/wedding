@@ -653,7 +653,12 @@ nav {
         cursor: pointer; }
         nav a:hover {
           color: #F53E7A;
-          border-bottom: 2px solid #F53E7A; } }
+          border-bottom: 2px solid #F53E7A; }
+        nav a:nth-child(2) {
+          margin-left: 1.875rem; } }
+    @media screen and (min-width: 1160px) {
+      nav a:nth-child(2) {
+        margin-left: 0; } }
   nav .nav-desktop {
     display: none; }
     @media screen and (min-width: 600px) {

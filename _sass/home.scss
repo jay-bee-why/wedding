@@ -281,6 +281,10 @@ nav {
 
 		$nav-mobile-white: rgba(255,255,255,.6);
 
+		// @include media($tablet) {
+		//
+		// }
+
 		@include media($medium-screen) {
 			display:none;
 			color:$nav-mobile-white;
@@ -292,6 +296,16 @@ nav {
 			&:hover {
 				color: $gradient-pink-to-orange-1;
 				border-bottom: 2px solid $gradient-pink-to-orange-1;
+			}
+
+			&:nth-child(2) {
+				margin-left: $spacer-m;
+			}
+		}
+
+		@include media($desktop-huge) {
+			&:nth-child(2) {
+				margin-left: 0;
 			}
 		}
 	}
