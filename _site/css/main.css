@@ -864,6 +864,11 @@ nav {
           text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
           color: #F56058; } }
 
+.location .important {
+  padding: 1.25rem;
+  box-sizing: border-box;
+  background-color: #fee9e8;
+  border: 1px solid #fbbcb8; }
 .location .map-placeholder__row {
   float: left;
   display: block;
@@ -952,18 +957,13 @@ nav {
   color: #F57F3A;
   font-weight: bold;
   transition: all 0.25s ease;
-  margin-bottom: 1.875rem; }
+  margin: 0 0.9375rem 1.875rem 0.9375rem; }
   .registry:hover {
     border-color: #F56058;
     color: #F56058;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); }
   .registry:active {
     color: #F56058; }
-  .registry:first-child {
-    margin-right: 0; }
-    @media screen and (min-width: 900px) {
-      .registry:first-child {
-        margin-right: 1.875rem; } }
   .registry img {
     max-height: 6.25rem; }
 

@@ -587,6 +587,13 @@ nav {
 
 .location {
 
+	.important {
+		padding: $spacer-s;
+		box-sizing: border-box;
+		background-color: lighten($gradient-pink-to-orange-2, 30%);
+		border: 1px solid lighten($gradient-pink-to-orange-2, 20%);
+	}
+
 	.map-placeholder__row {
 		@include span-columns(12);
 		@include clearfix;
@@ -675,7 +682,7 @@ nav {
 	color: $gradient-pink-to-orange-4;
 	font-weight: bold;
 	transition: all $base-duration $base-timing;
-	margin-bottom: $spacer-m;
+	margin: 0 ($spacer-m / 2) $spacer-m ($spacer-m / 2);
 
 	&:hover {
 		border-color: $gradient-pink-to-orange-2;
@@ -687,13 +694,21 @@ nav {
 		color: $gradient-pink-to-orange-2;
 	}
 
-	&:first-child {
-		margin-right: 0;
-
-		@include media($large-screen) {
-			margin-right: $spacer-m;
-		}
-	}
+	// &:first-child {
+	// 	margin-right: 0;
+	//
+	// 	@include media($medium-screen) {
+	// 		margin-right: $spacer-m;
+	// 	}
+	// }
+	//
+	// &:nth-child(2) {
+	// 	margin-right: 0;
+	//
+	// 	@include media($large-screen) {
+	// 		margin-right: $spacer-m;
+	// 	}
+	// }
 
 	img {
 		max-height: $spacer-xl;
